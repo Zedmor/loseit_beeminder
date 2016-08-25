@@ -25,3 +25,6 @@
 2016-08-25 15:59:56,617 - beesight - DEBUG - Ready to post new datapoints string to beeminder.com. Encoded URL follows:
 2016-08-25 15:59:56,618 - beesight - DEBUG - https://www.beeminder.com/api/v1/users/zedmor/goals/calorie/datapoints.json?auth_token=nGb4nTmas7Fczxc8QpTh&timestamp=1472011200.0&value=231.0&comment=loseit_script_entry
 2016-08-25 15:59:56,900 - beesight - INFO - Posted entry: {"timestamp":1472011200,"value":231.0,"comment":"loseit_script_entry","id":"57bf4e3c128d1c35c20079d5","updated_at":1472155196,"requestid":null,"canonical":"24 231 \"loseit_script_entry\"","daystamp":"20160824","status":"created"}
+2016-08-25 16:10:57,756 - beesight - DEBUG - Ready to post new datapoints string to beeminder.com. Encoded URL follows:
+2016-08-25 16:10:57,756 - beesight - DEBUG - https://www.beeminder.com/api/v1/users/zedmor/goals/calorie/datapoints.json?auth_token=nGb4nTmas7Fczxc8QpTh&timestamp=1472011200.0&value=231.0&comment=loseit_script_entry
+2016-08-25 16:10:58,115 - beesight - INFO - Posted entry: {"timestamp":1472011200,"value":231.0,"comment":"loseit_script_entry","id":"57bf50d1128d1c36070012b1","updated_at":1472155857,"requestid":null,"canonical":"24 231 \"loseit_script_entry\"","daystamp":"20160824","status":"created"}

@@ -11,7 +11,6 @@ This is an example app for API v2.
 
 import sys
 import dropbox
-from dropbox.files import WriteMode
 import re
 import os
 import datetime
@@ -40,27 +39,6 @@ TOKEN = 'uGooD_CJ_tQAAAAAAAAes1TYaG6_6XgNHn1WrW6XAhAUfAtMwfY8wiVbm57FCi2M'
 LOCALFILE = 'c:\deck.txt'
 BACKUPPATH = '/loseit/deck.txt'
 BASMET = 2000
-
-# Uploads contents of LOCALFILE to Dropbox
-def backup():
-    with open(LOCALFILE, 'rb') as f:
-        # We use WriteMode=overwrite to make sure that the settings in the file
-        # are changed on upload
-        print("Uploading " + LOCALFILE + " to Dropbox as " + BACKUPPATH + "...")
-        try:
-            dbx.files_upload(f, BACKUPPATH, mode=WriteMode('overwrite'))
-        except ApiError as err:
-            # This checks for the specific error where a user doesn't have
-            # enough Dropbox space quota to upload this file
-            if (err.error.is_path() and
-                    err.error.get_path().error.is_insufficient_space()):
-                sys.exit("ERROR: Cannot back up; insufficient space.")
-            elif err.user_message_text:
-                print(err.user_message_text)
-                sys.exit()
-            else:
-                print(err)
-                sys.exit()
 
 # Change the text string in LOCALFILE to be new_content
 # @param new_content is a string
