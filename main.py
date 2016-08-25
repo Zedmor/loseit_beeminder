@@ -29,7 +29,7 @@ if sys.version_info[0] < 3:
     from StringIO import StringIO
 else:
     from io import StringIO
-from dropbox.exceptions import ApiError, AuthError
+#from dropbox.exceptions import ApiError, AuthError
 
 # Add OAuth2 access token here.
 # You can generate one for yourself in the App Console.
@@ -39,6 +39,7 @@ TOKEN = 'uGooD_CJ_tQAAAAAAAAes1TYaG6_6XgNHn1WrW6XAhAUfAtMwfY8wiVbm57FCi2M'
 LOCALFILE = 'c:\deck.txt'
 BACKUPPATH = '/loseit/deck.txt'
 BASMET = 2000
+
 
 # Change the text string in LOCALFILE to be new_content
 # @param new_content is a string
